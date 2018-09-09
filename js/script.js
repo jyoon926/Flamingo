@@ -5,7 +5,6 @@
 		var $win = $(window);
 		var $bg = $('.bg');
 		var $bg2 = $('.bgdarker');
-		var $section2 = $('.section2');
 
 		$win.on('scroll', function() {
 			var top = $win.scrollTop()/-6000;
@@ -15,24 +14,32 @@
 			var distance = (offset - top2);
 			$bg.css('transform', 'scale(' + (top + 1.3) + ')');
 			$bg2.css('opacity', top1);
-			$section2.css('transform', 'translateX(' + ((top2 - distance - 2500) * -1) + 'px)');
-			$section2.css('opacity', top1);
 		});
-
-
 
 	}
 
 	//Smooth Scrolling Between Links
-	$("a").on('click', function(event) {
-		if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			},1000, function(){
-				window.location.hash = hash;
-			});
-		}
-	});
+	var slideIndex = 1;
+	
+	function plusSlides(n) {
+		slideIndex += 1;
+		$('.album').removeClass('active');
+		$('#album' + slideIndex).addClass('active');
+		$('.heading').removeClass('on');
+		$('#heading' + slideIndex).addClass('on');
+		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*620 + 'px');
+	}
+
+	function minusSlides(n) {
+		slideIndex += -1;
+		$('.album').removeClass('active');
+		$('#album' + slideIndex).addClass('active');
+		$('.heading').removeClass('on');
+		$('#heading' + slideIndex).addClass('on');
+		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*620 + 'px');
+	}
+	
+	$('.next').click(plusSlides);
+	$('.previous').click(minusSlides);
+
 });
