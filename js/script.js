@@ -10,10 +10,8 @@
 			var top = $win.scrollTop()/-6000;
 			var top1 = $win.scrollTop()/1200;
 			var top2 = $win.scrollTop();
-			var offset = $('.space').offset().top;
-			var distance = (offset - top2);
-			$bg.css('transform', 'scale(' + (top + 1.3) + ')');
-			$bg2.css('opacity', top1);
+			$bg.css('transform', 'scale(' + (top.toFixed(1) + 1.3) + ')');
+			$bg2.css('opacity', top1.toFixed(1));
 		});
 
 	}
