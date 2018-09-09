@@ -1,32 +1,24 @@
 @import "master";
 
-.headerbg {
-    position: fixed;
-    z-index: 99;
-    width: 120vw;
-    height: 120px;
-    top: -120px;
-    left: -10vw;
-    box-shadow: 0 60px 150px rgba(0,0,0,0.6);
-}
 header {
     position: fixed;
-    height: 120px;
+    height: 90px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
+    background: rgba(0,0,0,0);
 
     img {
         position: absolute;
-        height: 60px;
-        width: 60px;
+        height: 45px;
+        width: 45px;
         border: 2px solid white;
         box-sizing: border-box;
         border-radius: 30px;
-        top: 30px;
-        left: 30px;
+        top: 22.5px;
+        left: 22.5px;
     }
 
     nav {
@@ -37,8 +29,10 @@ header {
         a {
             color: white;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 1;
+            font-size: .9em;
+            letter-spacing: 1px;
 
             div {
                 height: 8px;
@@ -68,4 +62,10 @@ header {
         width: 100%;
         background: rgba(255,255,255,.5);
     }
+}
+.nav-up {
+    top: -90px;
+}
+.nav-down {
+    top: 0;
 }

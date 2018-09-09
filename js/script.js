@@ -8,7 +8,7 @@
 
 		$win.on('scroll', function() {
 			var top = $win.scrollTop()/-6000;
-			var top1 = $win.scrollTop()/1300;
+			var top1 = $win.scrollTop()/1200;
 			var top2 = $win.scrollTop();
 			var offset = $('.space').offset().top;
 			var distance = (offset - top2);
@@ -16,6 +16,53 @@
 			$bg2.css('opacity', top1);
 		});
 
+	}
+
+	$(window).on("scroll", function () {
+		if ($(this).scrollTop() > 100) {
+    		$("header").css("background", "rgba(243, 10, 135, 1)");
+		}
+		else {
+	   		$("header").css("background", "rgba(0,0,0,0)");
+		}
+	});
+
+	//******Hiding Header******
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var navbarHeight = 90;
+	// on scroll, let the interval function know the user has scrolled
+	$(window).scroll(function(event){
+	  didScroll = true;
+	});
+	// run hasScrolled() and reset didScroll status
+	setInterval(function() {
+	  if (didScroll) {
+		hasScrolled();
+		didScroll = false;
+	  }
+	}, 20);
+	function hasScrolled() {
+	  var st = $(this).scrollTop();
+  
+	  // Make sure they scroll more than delta
+	  if(Math.abs(lastScrollTop - st) <= delta)
+		  return;
+  
+	  // If they scrolled down and are past the navbar, add class .nav-up.
+	  // This is necessary so you never see what is "behind" the navbar.
+	  if (st > lastScrollTop && st > navbarHeight){
+		  // Scroll Down
+		  $('header').removeClass('nav-down').addClass('nav-up');
+	  } else {
+		  // Scroll Up
+		  if(st + $(window).height() < $(document).height()) {
+			  $('header').removeClass('nav-up').addClass('nav-down');
+		  }
+	  }
+  
+	  lastScrollTop = st;
 	}
 
 	//Smooth Scrolling Between Links
@@ -27,7 +74,7 @@
 		$('#album' + slideIndex).addClass('active');
 		$('.heading').removeClass('on');
 		$('#heading' + slideIndex).addClass('on');
-		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*620 + 'px');
+		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*720 + 'px');
 	}
 
 	function minusSlides(n) {
@@ -36,7 +83,7 @@
 		$('#album' + slideIndex).addClass('active');
 		$('.heading').removeClass('on');
 		$('#heading' + slideIndex).addClass('on');
-		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*620 + 'px');
+		$('.slidetrack').css('margin-left', '-' + (slideIndex-1)*720 + 'px');
 	}
 	
 	$('.next').click(plusSlides);
