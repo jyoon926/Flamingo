@@ -256,6 +256,7 @@ p, a {
           filter: brightness(0.5);
   -webkit-transition-duration: .6s;
           transition-duration: .6s;
+  border-radius: 10px;
 }
 
 .section2 .slidetrack #album2, .section2 .slidetrack #album3, .section2 .slidetrack #album4 {
