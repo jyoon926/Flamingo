@@ -127,6 +127,7 @@ p, a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 60px 60px 0 0;
 }
 
 .section2 .navigation {
@@ -249,15 +250,16 @@ p, a {
 .section2 .slidetrack .album {
   height: 350px;
   width: 350px;
-  background: #F30A87;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
   -webkit-transition-duration: .6s;
           transition-duration: .6s;
-  border-radius: 10px;
+  border-radius: 8px;
   z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section2 .slidetrack .album .albumInfo {
@@ -282,7 +284,7 @@ p, a {
   opacity: 0;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .section2 .slidetrack .album .albumInfo h3 {
@@ -322,6 +324,22 @@ p, a {
   display: -ms-flexbox;
   display: flex;
   opacity: 1;
+}
+
+.section2 .slidetrack #album1 {
+  background-image: url("../img/At Sea.jpg");
+}
+
+.section2 .slidetrack #album2 {
+  background-image: url("../img/Heavy Steps.jpg");
+}
+
+.section2 .slidetrack #album3 {
+  background-image: url("../img/Tycho.jpg");
+}
+
+.section2 .slidetrack #album4 {
+  background-image: url("../img/Transitions.jpg");
 }
 
 .section2 .slidetrack #album2, .section2 .slidetrack #album3, .section2 .slidetrack #album4 {

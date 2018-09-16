@@ -63,7 +63,7 @@
 	  lastScrollTop = st;
 	}
 
-	//Smooth Scrolling Between Links
+	//Albums
 	var slideIndex = 1;
 	
 	function plusSlides(n) {
