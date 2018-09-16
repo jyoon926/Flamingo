@@ -257,6 +257,71 @@ p, a {
   -webkit-transition-duration: .6s;
           transition-duration: .6s;
   border-radius: 10px;
+  z-index: 1;
+}
+
+.section2 .slidetrack .album .albumInfo {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.section2 .slidetrack .album .albumInfo h3 {
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section2 .slidetrack .album .albumInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section2 .slidetrack .album .albumInfo ul a {
+  text-align: center;
+  display: inline;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  margin: 0 auto 5px auto;
+  padding-bottom: -5px;
+}
+
+.section2 .slidetrack .album .albumInfo ul a:hover {
+  border-bottom: 2px solid white;
+}
+
+.section2 .slidetrack .active:hover .albumInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
 }
 
 .section2 .slidetrack #album2, .section2 .slidetrack #album3, .section2 .slidetrack #album4 {
