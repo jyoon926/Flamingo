@@ -33,9 +33,11 @@
 	$(window).on("scroll", function () {
 		if ($(this).scrollTop() > 200) {
     		$("header").css("background", "rgba(243, 10, 135, 1)");
+    		$("header").css("box-shadow", "0 0 20px rgba(0,0,0,0.6)");
 		}
 		else {
 	   		$("header").css("background", "rgba(0,0,0,0)");
+			$("header").css("box-shadow", "0 0 0px rgba(0,0,0,0)");
 		}
 	});
 

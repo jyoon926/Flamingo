@@ -14,6 +14,10 @@ header {
   z-index: 100;
   background: rgba(0, 0, 0, 0);
   border-radius: 0 0 12px 12px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
 }
 
 header img {
@@ -79,7 +83,7 @@ header .line {
 }
 
 .nav-up {
-  top: -90px;
+  top: -120px;
 }
 
 .nav-down {
