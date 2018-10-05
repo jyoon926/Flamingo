@@ -44,7 +44,7 @@ p, a {
     width: 100vw;
     z-index: -3;
     //background: $pink;
-    background-image: url('../img/guitar.jpg');
+    background-image: url('../img/lander.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -81,11 +81,24 @@ p, a {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: none;
 
     h1 {
-        margin: auto;
         color: white;
+        margin-bottom: 50px;
+    }
+    a {
+        color: white;
+        background: $pink;
+        padding: 20px 30px;
+        border-radius: 7px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -103,7 +116,7 @@ p, a {
 
 .section2 {
     background: black;
-    padding: 150px 0 100px 0;
+    padding: 150px 0 250px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,4 +281,78 @@ p, a {
 .on {
     opacity: 1 !important;
     z-index: 1 !important;
+}
+
+.section3 {
+    background: $light-pink;
+    padding: 100px 0 120px 0;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px 60px 0 0;
+
+    h2 {
+        text-align: center;
+        font-size: 5em;
+        color: $pink;
+        margin-bottom: 80px;
+    }
+    .shopgrid {
+        margin: 0 100px;
+        display: flex;
+        justify-content: center;
+
+        .item {
+            height: 300px;
+            width: 300px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 10px;
+            border-radius: 8px;
+
+            .itemInfo {
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                background: rgba(255, 207, 239, .7);
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+
+                .name {
+                    font-size: 2em;
+                    font-weight: 500;
+                    line-height: 1;
+                    margin-top: 10px;
+                }
+                .price {
+                    font-size: 3em;
+                    font-weight: 500;
+                    margin: 10px;
+                }
+                .buy {
+                    font-size: 1.25em;
+                    color: $pink;
+                    border-bottom: 2px solid rgba(0,0,0,0);
+                    &:hover {
+                        border-bottom: 2px solid $pink;
+                    }
+                }
+            }
+            &:hover .itemInfo {
+                opacity: 1;
+            }
+        }
+        #item1 {
+            background-image: url('../img/At\ Sea.jpg');
+        }
+        #item2, #item3 {
+            background: $dark-pink;
+        }
+    }
 }

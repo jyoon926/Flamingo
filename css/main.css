@@ -49,7 +49,7 @@ p, a {
   height: 100vh;
   width: 100vw;
   z-index: -3;
-  background-image: url("../img/guitar.jpg");
+  background-image: url("../img/lander.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -94,12 +94,34 @@ p, a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: none;
 }
 
 .lander h1 {
-  margin: auto;
   color: white;
+  margin-bottom: 50px;
+}
+
+.lander a {
+  color: white;
+  background: #F30A87;
+  padding: 20px 30px;
+  border-radius: 7px;
+}
+
+.lander a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .section1 {
@@ -116,7 +138,7 @@ p, a {
 
 .section2 {
   background: black;
-  padding: 150px 0 100px 0;
+  padding: 150px 0 250px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,5 +403,105 @@ p, a {
 .on {
   opacity: 1 !important;
   z-index: 1 !important;
+}
+
+.section3 {
+  background: #ffcfef;
+  padding: 100px 0 120px 0;
+  margin-top: -150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 60px 60px 0 0;
+}
+
+.section3 h2 {
+  text-align: center;
+  font-size: 5em;
+  color: #F30A87;
+  margin-bottom: 80px;
+}
+
+.section3 .shopgrid {
+  margin: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section3 .shopgrid .item {
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.section3 .shopgrid .item .itemInfo {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 207, 239, 0.7);
+  text-align: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section3 .shopgrid .item .itemInfo .name {
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.section3 .shopgrid .item .itemInfo .price {
+  font-size: 3em;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.section3 .shopgrid .item .itemInfo .buy {
+  font-size: 1.25em;
+  color: #F30A87;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.section3 .shopgrid .item .itemInfo .buy:hover {
+  border-bottom: 2px solid #F30A87;
+}
+
+.section3 .shopgrid .item:hover .itemInfo {
+  opacity: 1;
+}
+
+.section3 .shopgrid #item1 {
+  background-image: url("../img/At Sea.jpg");
+}
+
+.section3 .shopgrid #item2, .section3 .shopgrid #item3 {
+  background: #99007f;
 }
 /*# sourceMappingURL=main.css.map */

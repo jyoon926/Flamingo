@@ -20,10 +20,6 @@ header img {
   position: absolute;
   height: 45px;
   width: 45px;
-  border: 2px solid white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 30px;
   top: 22.5px;
   left: 22.5px;
 }

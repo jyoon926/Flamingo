@@ -1,4 +1,18 @@
- $(document).ready(function(){
+ $(document).ready(function()
+ {
+
+	//Smooth Scrolling Between Links
+	$("a").on('click', function(event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			},1600, function(){
+				window.location.hash = hash;
+			});
+		}
+	});
 
 	//BG On Big Displays
 	if ( $(window).width() > 739) {
@@ -17,7 +31,7 @@
 	}
 
 	$(window).on("scroll", function () {
-		if ($(this).scrollTop() > 100) {
+		if ($(this).scrollTop() > 200) {
     		$("header").css("background", "rgba(243, 10, 135, 1)");
 		}
 		else {
