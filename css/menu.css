@@ -28,6 +28,11 @@ header img {
   left: 22.5px;
 }
 
+header .checkbox {
+  opacity: 0;
+  position: fixed;
+}
+
 header nav {
   width: 480px;
   display: -webkit-box;
@@ -38,7 +43,7 @@ header nav {
           justify-content: space-between;
 }
 
-header nav a {
+header nav a, header nav .contactButton {
   color: white;
   text-transform: uppercase;
   font-weight: 400;
@@ -47,7 +52,7 @@ header nav a {
   letter-spacing: 1px;
 }
 
-header nav a div {
+header nav a div, header nav .contactButton div {
   height: 8px;
   width: 8px;
   background: white;
@@ -69,7 +74,11 @@ header nav a div {
           transform-origin: bottom;
 }
 
-header nav a:hover > .dot {
+header nav a:hover, header nav .contactButton:hover {
+  cursor: pointer;
+}
+
+header nav a:hover > .dot, header nav .contactButton:hover > .dot {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -88,5 +97,149 @@ header .line {
 
 .nav-down {
   top: 0;
+}
+
+.contactPopup {
+  position: fixed;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  background: -webkit-gradient(linear, left bottom, right top, from(#99007f), to(#f40a87));
+  background: linear-gradient(to top right, #99007f, #f40a87);
+  top: 50px;
+  left: 50px;
+  border-radius: 14px;
+  -webkit-box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  color: white;
+  opacity: 0;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+}
+
+.contactPopup h5 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: -20px;
+}
+
+.contactPopup h3 {
+  font-size: 6em;
+  font-weight: 500;
+}
+
+.contactPopup .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 260px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.contactPopup .contact a {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 40px;
+  border-radius: 7px;
+}
+
+.contactPopup .contact a:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.contactPopup .contactX {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 40px;
+  right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 102;
+  padding: 10px;
+  margin-top: -10px;
+}
+
+.contactPopup .contactX .line {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 1.5px;
+}
+
+.contactPopup .contactX .one {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.contactPopup .contactX .two {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contactPopup .contactX:hover {
+  cursor: pointer;
+}
+
+.contactPopup .contactXBg {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  z-index: 101;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.contactPopup .contactXBg:hover {
+  cursor: pointer;
+}
+
+.contactPopup .contactX:hover ~ .contactXBg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.checkbox:checked ~ .contactPopup {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 /*# sourceMappingURL=menu.css.map */
