@@ -130,7 +130,7 @@ p, a {
 }
 
 .section1 h2 {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   padding: 140px 20vw;
   text-align: center;
   line-height: 1.5;
@@ -490,6 +490,7 @@ p, a {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  border-radius: 7px;
 }
 
 .section3 .shopgrid .item .itemInfo .name {
