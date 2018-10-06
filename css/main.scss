@@ -158,8 +158,6 @@ p, a {
                 }
             }
             .previous, .pre {
-                font-size: 4em;
-                font-weight: 200;
                 margin-right: 60px;
                 user-select: none;
             }
@@ -167,10 +165,11 @@ p, a {
                 opacity: .5;
             }
             .next, .nex {
-                font-size: 4em;
-                font-weight: 200;
                 margin-left: 60px;
                 user-select: none;
+            }
+            .arrow img {
+                height: 20px;
             }
             .arrow:hover {
                 cursor: pointer;
@@ -272,6 +271,10 @@ p, a {
             margin-bottom: -3px;
             border-bottom: 3px solid $pink;
         }
+        .arrowRight {
+            height: 18px;
+            margin-left: 10px;
+        }
     }
 }
 
@@ -335,6 +338,10 @@ p, a {
                 text-align: center;
                 padding: 20px;
                 box-sizing: border-box;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: white;
 
                 .name {
                     font-size: 2em;
@@ -348,16 +355,24 @@ p, a {
                     margin: 10px;
                 }
                 .buy {
-                    font-size: 1.25em;
+                    font-size: 1em;
+                    background: white;
                     color: $pink;
-                    border-bottom: 2px solid rgba(0,0,0,0);
+                    font-weight: 500;
+                    padding: 5px 17px;
+                    border-radius: 7px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     &:hover {
-                        border-bottom: 2px solid $pink;
+                        transform: scale(1.1);
+                    }
+                    .arrowRight {
+                        height: 8px;
+                        margin-left: 6px;
                     }
                 }
-            }
-            &:hover {
-                
             }
             &:hover .itemInfo {
                 opacity: 1;
@@ -365,12 +380,21 @@ p, a {
         }
         #item1 {
             background-image: url('../img/At\ Sea.jpg');
+            .itemInfo {
+                background-image: url('../img/At\ Seadark.jpg');
+            }
         }
         #item2 {
             background-image: url('../img/longsleeve.png');
+            .itemInfo {
+                background-image: url('../img/longsleevedark.png');
+            }
         }
         #item3 {
             background-image: url('../img/cap.png');
+            .itemInfo {
+                background-image: url('../img/capdark.png');
+            }
         }
     }
 }

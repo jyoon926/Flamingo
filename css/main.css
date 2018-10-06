@@ -68,7 +68,7 @@ p, a {
   height: 100vh;
   width: 100vw;
   z-index: -2;
-  background: #F30A87;
+  background: #f40a87;
   opacity: 0;
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
@@ -114,7 +114,7 @@ p, a {
 
 .lander a {
   color: white;
-  background: #F30A87;
+  background: #f40a87;
   padding: 20px 30px;
   border-radius: 7px;
 }
@@ -216,8 +216,6 @@ p, a {
 }
 
 .section2 .navigation .heading .previous, .section2 .navigation .heading .pre {
-  font-size: 4em;
-  font-weight: 200;
   margin-right: 60px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -230,8 +228,6 @@ p, a {
 }
 
 .section2 .navigation .heading .next, .section2 .navigation .heading .nex {
-  font-size: 4em;
-  font-weight: 200;
   margin-left: 60px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -239,9 +235,13 @@ p, a {
           user-select: none;
 }
 
+.section2 .navigation .heading .arrow img {
+  height: 20px;
+}
+
 .section2 .navigation .heading .arrow:hover {
   cursor: pointer;
-  color: #F30A87;
+  color: #f40a87;
 }
 
 .section2 .navigation .heading .pre:hover, .section2 .navigation .heading .nex:hover {
@@ -371,14 +371,14 @@ p, a {
 .section2 .slidetrack .albumempty {
   height: 350px;
   width: 350px;
-  background: #F30A87;
+  background: #f40a87;
   -webkit-filter: brightness(0);
           filter: brightness(0);
   margin-right: 10px;
 }
 
 .section2 .discography {
-  color: #F30A87;
+  color: #f40a87;
   font-size: 2.5em;
   border-bottom: 0px solid black;
   padding-bottom: 2px;
@@ -391,7 +391,12 @@ p, a {
 
 .section2 .discography:hover {
   margin-bottom: -3px;
-  border-bottom: 3px solid #F30A87;
+  border-bottom: 3px solid #f40a87;
+}
+
+.section2 .discography .arrowRight {
+  height: 18px;
+  margin-left: 10px;
 }
 
 .active {
@@ -407,8 +412,8 @@ p, a {
 }
 
 .section3 {
-  background: -webkit-gradient(linear, left bottom, right top, from(#99007f), to(#F30A87));
-  background: linear-gradient(to top right, #99007f, #F30A87);
+  background: -webkit-gradient(linear, left bottom, right top, from(#99007f), to(#f40a87));
+  background: linear-gradient(to top right, #99007f, #f40a87);
   padding: 140px 0 160px 0;
   margin-top: -150px;
   display: -webkit-box;
@@ -481,6 +486,10 @@ p, a {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .section3 .shopgrid .item .itemInfo .name {
@@ -497,13 +506,35 @@ p, a {
 }
 
 .section3 .shopgrid .item .itemInfo .buy {
-  font-size: 1.25em;
-  color: #F30A87;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  font-size: 1em;
+  background: white;
+  color: #f40a87;
+  font-weight: 500;
+  padding: 5px 17px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section3 .shopgrid .item .itemInfo .buy:hover {
-  border-bottom: 2px solid #F30A87;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.section3 .shopgrid .item .itemInfo .buy .arrowRight {
+  height: 8px;
+  margin-left: 6px;
 }
 
 .section3 .shopgrid .item:hover .itemInfo {
@@ -514,11 +545,23 @@ p, a {
   background-image: url("../img/At Sea.jpg");
 }
 
+.section3 .shopgrid #item1 .itemInfo {
+  background-image: url("../img/At Seadark.jpg");
+}
+
 .section3 .shopgrid #item2 {
   background-image: url("../img/longsleeve.png");
 }
 
+.section3 .shopgrid #item2 .itemInfo {
+  background-image: url("../img/longsleevedark.png");
+}
+
 .section3 .shopgrid #item3 {
   background-image: url("../img/cap.png");
+}
+
+.section3 .shopgrid #item3 .itemInfo {
+  background-image: url("../img/capdark.png");
 }
 /*# sourceMappingURL=main.css.map */
