@@ -116,7 +116,7 @@ p, a {
 
 .section2 {
     background: black;
-    padding: 150px 0 250px 0;
+    padding: 200px 0 330px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,6 +269,7 @@ p, a {
         user-select: none;
 
         &:hover {
+            margin-bottom: -3px;
             border-bottom: 3px solid $pink;
         }
     }
@@ -284,23 +285,35 @@ p, a {
 }
 
 .section3 {
-    background: $light-pink;
-    padding: 100px 0 120px 0;
+    background: linear-gradient(to top right, $dark-pink, $pink);
+    padding: 140px 0 160px 0;
     margin-top: -150px;
     display: flex;
     flex-direction: column;
     border-radius: 60px 60px 0 0;
 
+    .images {
+        position: absolute;
+        margin: -140px 0;
+
+        img {
+            position: absolute;
+            height: 140px;
+        }
+    }
+
     h2 {
         text-align: center;
         font-size: 5em;
-        color: $pink;
+        color: white;
         margin-bottom: 80px;
+        z-index: 1;
     }
     .shopgrid {
         margin: 0 100px;
         display: flex;
         justify-content: center;
+        z-index: 1;
 
         .item {
             height: 300px;
@@ -308,7 +321,7 @@ p, a {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            margin: 10px;
+            margin: 16px;
             border-radius: 8px;
 
             .itemInfo {
@@ -319,7 +332,6 @@ p, a {
                 align-items: center;
                 height: 100%;
                 width: 100%;
-                background: rgba(255, 207, 239, .7);
                 text-align: center;
                 padding: 20px;
                 box-sizing: border-box;
@@ -344,6 +356,9 @@ p, a {
                     }
                 }
             }
+            &:hover {
+                
+            }
             &:hover .itemInfo {
                 opacity: 1;
             }
@@ -351,8 +366,11 @@ p, a {
         #item1 {
             background-image: url('../img/At\ Sea.jpg');
         }
-        #item2, #item3 {
-            background: $dark-pink;
+        #item2 {
+            background-image: url('../img/longsleeve.png');
+        }
+        #item3 {
+            background-image: url('../img/cap.png');
         }
     }
 }

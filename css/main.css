@@ -138,7 +138,7 @@ p, a {
 
 .section2 {
   background: black;
-  padding: 150px 0 250px 0;
+  padding: 200px 0 330px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,6 +390,7 @@ p, a {
 }
 
 .section2 .discography:hover {
+  margin-bottom: -3px;
   border-bottom: 3px solid #F30A87;
 }
 
@@ -406,8 +407,9 @@ p, a {
 }
 
 .section3 {
-  background: #ffcfef;
-  padding: 100px 0 120px 0;
+  background: -webkit-gradient(linear, left bottom, right top, from(#99007f), to(#F30A87));
+  background: linear-gradient(to top right, #99007f, #F30A87);
+  padding: 140px 0 160px 0;
   margin-top: -150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,11 +421,22 @@ p, a {
   border-radius: 60px 60px 0 0;
 }
 
+.section3 .images {
+  position: absolute;
+  margin: -140px 0;
+}
+
+.section3 .images img {
+  position: absolute;
+  height: 140px;
+}
+
 .section3 h2 {
   text-align: center;
   font-size: 5em;
-  color: #F30A87;
+  color: white;
   margin-bottom: 80px;
+  z-index: 1;
 }
 
 .section3 .shopgrid {
@@ -434,6 +447,7 @@ p, a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .section3 .shopgrid .item {
@@ -442,7 +456,7 @@ p, a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 10px;
+  margin: 16px;
   border-radius: 8px;
 }
 
@@ -463,7 +477,6 @@ p, a {
           align-items: center;
   height: 100%;
   width: 100%;
-  background: rgba(255, 207, 239, 0.7);
   text-align: center;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -501,7 +514,11 @@ p, a {
   background-image: url("../img/At Sea.jpg");
 }
 
-.section3 .shopgrid #item2, .section3 .shopgrid #item3 {
-  background: #99007f;
+.section3 .shopgrid #item2 {
+  background-image: url("../img/longsleeve.png");
+}
+
+.section3 .shopgrid #item3 {
+  background-image: url("../img/cap.png");
 }
 /*# sourceMappingURL=main.css.map */
