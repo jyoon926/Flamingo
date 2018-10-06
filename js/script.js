@@ -2,7 +2,7 @@
  {
 
 	//Rand flying positions
-	var awidth = document.body.clientWidth
+	var awidth = document.body.clientWidth - 200;
 	var aheight = 616;
 	var randPosX = Math.floor((Math.random() * awidth));
 	var randPosY = Math.floor((Math.random() * aheight));
