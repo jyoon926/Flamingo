@@ -22,10 +22,10 @@ header {
 
 header img {
   position: absolute;
-  height: 45px;
-  width: 45px;
-  top: 22.5px;
-  left: 22.5px;
+  height: 35px;
+  width: 20.05px;
+  top: 27.5px;
+  left: 27.5px;
 }
 
 header .checkbox {
@@ -50,6 +50,7 @@ header nav a, header nav .contactButton {
   line-height: 1;
   font-size: .9em;
   letter-spacing: 1px;
+  font-weight: 500;
 }
 
 header nav a div, header nav .contactButton div {

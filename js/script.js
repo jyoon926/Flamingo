@@ -3,25 +3,23 @@
 
 	//Rand flying positions
 	var awidth = document.body.clientWidth - 200;
-	var aheight = 616;
-	var randPosX = Math.floor((Math.random() * awidth));
-	var randPosY = Math.floor((Math.random() * aheight));
-	$('#img1').css('left', Math.floor((Math.random() * awidth)));
-	$('#img1').css('top', Math.floor((Math.random() * aheight)));
-	$('#img2').css('left', Math.floor((Math.random() * awidth)));
-	$('#img2').css('top', Math.floor((Math.random() * aheight)));
-	$('#img3').css('left', Math.floor((Math.random() * awidth)));
-	$('#img3').css('top', Math.floor((Math.random() * aheight)));
-	$('#img4').css('left', Math.floor((Math.random() * awidth)));
-	$('#img4').css('top', Math.floor((Math.random() * aheight)));
-	$('#img5').css('left', Math.floor((Math.random() * awidth)));
-	$('#img5').css('top', Math.floor((Math.random() * aheight)));
-	$('#img6').css('left', Math.floor((Math.random() * awidth)));
-	$('#img6').css('top', Math.floor((Math.random() * aheight)));
-	$('#img7').css('left', Math.floor((Math.random() * awidth)));
-	$('#img7').css('top', Math.floor((Math.random() * aheight)));
-	$('#img8').css('left', Math.floor((Math.random() * awidth)));
-	$('#img8').css('top', Math.floor((Math.random() * aheight)));
+	var aheight = $('#section3').height();
+	var wmultiplier = Math.round(awidth / 200);
+	var hmultiplier = Math.round(aheight / 200);
+	$('#img1').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img1').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img2').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img2').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img3').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img3').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img4').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img4').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img5').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img5').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img6').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img6').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
+	$('#img7').css('left', Math.floor(((Math.random() * wmultiplier) * 200)));
+	$('#img7').css('top', Math.floor(((Math.random() * hmultiplier) * 200)));
 
 	//Smooth Scrolling Between Links
 	$("a").on('click', function(event) {
