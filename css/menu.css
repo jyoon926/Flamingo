@@ -46,11 +46,10 @@ header nav {
 header nav a, header nav .contactButton {
   color: white;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1;
   font-size: .9em;
   letter-spacing: 1px;
-  font-weight: 500;
 }
 
 header nav a div, header nav .contactButton div {
